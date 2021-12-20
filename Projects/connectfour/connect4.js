@@ -31,10 +31,7 @@ function makeBoard() {
 /** makeHtmlBoard: make HTML table and row of column tops. */
 
 function makeHtmlBoard() {
-  // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
   let htmlBoard = document.getElementById("board");
-
-  // TODO: add comment for this code
   let top = document.createElement("tr"); 
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick); //checks for if the top opening element has been clicked to drop the piece
@@ -46,7 +43,6 @@ function makeHtmlBoard() {
   }
   htmlBoard.append(top);
 
-  // TODO: add comment for this code
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr"); //create each row element
     for (let x = 0; x < COLUMNS; x++) {
@@ -61,7 +57,6 @@ function makeHtmlBoard() {
 /** findSpotForCol: given column x, return top empty y (null if filled) */
 
 function findSpotForCol(x) {
-  // TODO: write the real version of this, rather than always returning 0
    for (let i = HEIGHT - 1 ; i >= 0 ; i--) {
     if(!board[i][x]) {
       return i;
@@ -78,7 +73,7 @@ function placeInTable(y, x) {
   piece.classList.add("piece");
   piece.classList.add(`p${currPlayer}`);
 
-  ++pieceCount;
+  ++pieceCount; //increment pieces played by one each time the top row is clicked to populate the board
   const celltoPlace = document.getElementById(`${y}-${x}`);
   celltoPlace.append(piece);
 }
@@ -86,7 +81,6 @@ function placeInTable(y, x) {
 /** endGame: announce game end */
 
 function endGame(msg) {
-  // TODO: pop up alert message
   alert(msg);
 }
 
@@ -103,7 +97,6 @@ function handleClick(evt) {
   }
 
   // place piece in board and add to HTML table
-  // TODO: add line to update in-memory board
   board[y][x] = currPlayer;
   placeInTable(y, x);
 
@@ -113,16 +106,11 @@ function handleClick(evt) {
   }
 
   // check for tie
-  // TODO: check if all cells in board are filled; if so call, call endGame
   if(pieceCount === HEIGHT * COLUMNS) {
     return endGame("This is a tie!");
   };
 
-
-  /* board.every((row) => row.every(el => el)) */
-
   // switch players
-  // TODO: switch currPlayer 1 <-> 2
   currPlayer = currPlayer === 1 ? 2: 1;
 
 }
@@ -147,7 +135,7 @@ function checkForWin() {
 
   // TODO: read and understand this code. Add comments to help you.
 
-  //Store all of the (y,x) four cell lines of connecting fours and then check to see if there's a win
+  //Store all of the (y,x) four cell lines of connecting fours
   for (let y = 0; y < HEIGHT; y++) {
     for (let x = 0; x < COLUMNS; x++) {
       let horiz = [[y, x], [y, x + 1], [y, x + 2], [y, x + 3]];
@@ -155,8 +143,9 @@ function checkForWin() {
       let diagDR = [[y, x], [y + 1, x + 1], [y + 2, x + 2], [y + 3, x + 3]];
       let diagDL = [[y, x], [y + 1, x - 1], [y + 2, x - 2], [y + 3, x - 3]];
 
+      // check to see if there's a match with the possible win combinations
       if (_win(horiz) || _win(vert) || _win(diagDR) || _win(diagDL)) {
-        return true;
+        return true; 
       }
     }
   }
