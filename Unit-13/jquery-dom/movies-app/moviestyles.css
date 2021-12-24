@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(127, 161, 255);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(160, 25, 25);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 35px ;
+}
+
+table{
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 2px solid darkslategray;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+ul > li {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.del-btn {
+    background-color: red;
+    border: none;
+    text-shadow: 0.5em;
+    text-decoration: solid red;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 4px 2px;
+    border-radius: 15px;
+}
+
+button > span {
+    text-decoration-color: red;
+    font-weight: bolder;
+}
