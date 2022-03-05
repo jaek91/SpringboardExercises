@@ -1,0 +1,24 @@
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg.ok {
+    color: white;
+    background-color: green;
+}
+  
+.msg.err {
+    color: white;
+    background-color: #ED2939;
+}
+
+#display-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
