@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+/* .form-group {
+    height: auto;
+} */
+
+.input {
+    width: 100%;
+}
+
+body > form {
+   width: 100%;
+}
+
+.form-group {
+    padding-top: 5%;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

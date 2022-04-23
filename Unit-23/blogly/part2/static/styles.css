@@ -1,0 +1,16 @@
+body {
+    text-align: center
+}
+
+/* .edit-post-form {
+    display: inline-block;
+} */
+
+.form-group {
+    width: 50%;
+    height: auto;
+}
+
+body > form {
+    display: inline-block;
+}

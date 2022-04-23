@@ -1,0 +1,2 @@
+todo for blogly:
+# check if I can delete posts along with users (create new post-> assign to user -> delete user -> try to fetch user and posts)
