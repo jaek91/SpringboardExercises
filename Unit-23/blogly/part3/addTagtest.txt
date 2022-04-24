@@ -1,0 +1,10 @@
+    ##test to fix and update later##
+    
+    # def test_add_new_tag(self):
+    #     with app.test_client() as client:
+    #         new_tag = {"name": "This is a test new tag"}
+    #         resp = client.post("/tags/new", data = new_tag)
+    #         html = resp.get_data(as_text=True)
+
+    #         self.assertEqual(resp.status_code, 200)
+    #         self.assertIn(new_tag["name"],html)
