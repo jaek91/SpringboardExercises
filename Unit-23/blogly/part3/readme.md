@@ -1,4 +1,4 @@
-#Steps to run the blogly app
+# Steps to run the blogly app
 
 * Start a virtual environment
 * Install per requirements.txt
